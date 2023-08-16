@@ -31,4 +31,25 @@ img{
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0 , 1);
+        cursor: pointer;
+        position: relative;
+        background-color: black;
+
+}
+.card img{
+    padding: 0.5rem;
+    opacity: 0;
+
+}
+.selected{
+    outline: 3px, solid #0fbcf0;
+    outline-offset: -3px;
+    border-radius: 8px;
+}
+.selected img{
+    opacity: 1;
+
+}
+.matched{
+    outline: 3px solid #ff3f34;
 }

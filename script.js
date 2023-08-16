@@ -42,3 +42,60 @@ function showCardBoard(){
     })
 }
 showCardBoard();
+
+grid.addEventListener('click', function(e){
+    let selectedCard = e.target.parentElement;
+    if(e.target.classList.contains('grid')){
+        return;
+    }
+    if(count <2){
+        count++;
+        if(count ==1){
+            firstGuess = selectedCard.dataset.name;
+            console.log(firstGuess);
+            selectedCard.classList.add('selected', 'is-clicked');
+        }else{
+            if(!selectedCard.classList.contains('is-clicked')){
+                secondGuess = selectedCard.dataset.name;
+                console.log(secondGuess);
+                selectedCard.classList.add('selected');
+                checkCardMatch(firstGuess, secondGuess);
+                document.querySelectorAll('.card').forEach((card)=>{
+                    card.classList.remove('is-clicked');
+                });
+            } else{
+                count--;
+            }
+        }
+    }
+
+});
+
+
+function checkCardMatch(guess1, guess2){
+    if(guess1 == guess2) match();
+    else unmatch();
+
+}
+
+let match = function(){
+    let selectedCards = document.querySelectorAll('.selected');
+    selectedCards.forEach(card =>{
+        card.classList.add('matched');
+        card.querySelector('img').style.opacity = "1";
+        card.style.pointerEvents = "none";
+        card.style.opacity = "0.8";
+        card.classList.remove('selected');
+    });
+    count = 0;
+};
+
+let unmatch = function(){
+    let selectedCards = document.querySelectorAll('.selected');
+    setTimeout(() => {
+        selectedCards.forEach((card) =>{
+            card.classList.remove('selected');
+        }, 500);
+    });
+    count = 0;
+}
