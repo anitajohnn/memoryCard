@@ -53,3 +53,14 @@ img{
 .matched{
     outline: 3px solid #ff3f34;
 }
+@media(max-width: 1000px){
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 500px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
