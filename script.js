@@ -37,7 +37,7 @@ function showCardBoard(){
         let card = document.createElement('div');
         card.classList.add('card');
         card.dataset.name = item.name;
-        card.innerHTML = `<img src= "${item.img_src}">`;
+        card.innerHTML = `<img src= "${item.img_source}">`;
         grid.appendChild(card);
     })
 }
