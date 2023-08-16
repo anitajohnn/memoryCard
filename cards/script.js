@@ -1,13 +1,13 @@
 let cardsList = [
-    {"name" : "house1", "img_src" : "images/baratheon.jpg"},
-    {"name" : "house2", "img_src" : "images/bolton.jpg"},
-    {"name" : "house3", "img_src" : "images/greyjoy.jpg"},
-    {"name" : "house4", "img_src" : "images/lannister.jpg"},
-    {"name" : "house5", "img_src" : "images/martell.jpg"},
-    {"name" : "house6", "img_src" : "images/stark.jpg"},
-    {"name" : "house7", "img_src" : "images/targaryen.jpg"},
-    {"name" : "house8", "img_src" : "images/tully.jpg"},
-    {"name" : "house9", "img_src" : "images/tyrell.jpg"},
+    {"name" : "house1", "img_source" : "images/baratheon.jpg"},
+    {"name" : "house2", "img_source" : "images/bolton.jpg"},
+    {"name" : "house3", "img_source" : "images/greyjoy.jpg"},
+    {"name" : "house4", "img_source" : "images/lannister.jpg"},
+    {"name" : "house5", "img_source" : "images/martell.jpg"},
+    {"name" : "house6", "img_source" : "images/stark.jpg"},
+    {"name" : "house7", "img_source" : "images/targaryen.jpg"},
+    {"name" : "house8", "img_source" : "images/tully.jpg"},
+    {"name" : "house9", "img_source" : "images/tyrell.jpg"},
 ];
 
 let count = 0;
